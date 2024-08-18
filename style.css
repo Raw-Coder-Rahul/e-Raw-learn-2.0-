@@ -25,7 +25,7 @@ body {
     align-items: center;
     background-color: #fff;
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -51,6 +51,7 @@ body {
 
 .dropdown {
     position: relative;
+    margin-right: 2rem;
 }
 
 .dropbtn {
@@ -89,10 +90,41 @@ body {
     display: block;
 }
 
-#search-bar {
+/* Search Bar Styling */
+#search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #002765;
+    border-radius: 25px;
     padding: 5px;
-    font-size: 16px;
+    background-color: #fff;
+    margin-right: 2rem;
 }
+
+#search-bar {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    flex-grow: 1;
+    border-radius: 20px;
+    background: transparent;
+}
+
+#search-icon {
+    background: transparent;
+    border: none;
+    color: #002765;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+#search-icon:hover {
+    background-color: #f1f1f1;
+}
+
 
 /* Home Section Styles */
 #home {
@@ -136,64 +168,6 @@ body {
 /* Main Content Styles */
 .content {
     padding: 20px;
-}
-
-/* Topic Videos Section */
-#topic-videos {
-    margin-bottom: 20px;
-}
-
-.video-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.video-cards .card {
-    width: 300px;
-}
-
-/* eBooks Section */
-#ebooks {
-    margin-bottom: 20px;
-}
-
-.ebook-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.ebook-cards .card {
-    width: 300px;
-}
-
-/* About Us Section */
-#about-us {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-}
-
-.team-member, .teacher-helper {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.team-member img, .teacher-helper img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
-.team-member h3, .teacher-helper h3 {
-    margin: 0;
-}
-
-.team-member p, .teacher-helper p {
-    margin: 0;
 }
 
 /* Modal Styles */
@@ -260,108 +234,176 @@ body {
     background-color: #001d4a;
 }
 
-/* Button Style 82 */
-.button-49,
-.button-49:after {
-    width: 150px;
-    height: 76px;
-    line-height: 79px;
-    font-size: 20px;
-    font-family: 'Bebas Neue', sans-serif;
-    background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
-    border: 0;
-    color: #fff;
-    letter-spacing: 3px;
-    box-shadow: 6px 0px 0px #00E6F6;
-    outline: transparent;
+/* CSS */
+/* Adjusted button-82 styles for Login and Signup */
+
+/* Container Styles */
+.nav-acc {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+/* General Button Styles */
+.button-82-pushable {
     position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms, transform 250ms;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    width: auto; /* Ensure button width adjusts to content */
 }
 
-.button-49:after {
-    --slice-0: inset(50% 50% 50% 50%);
-    --slice-1: inset(80% -6px 0 0);
-    --slice-2: inset(50% -6px 30% 0);
-    --slice-3: inset(10% -6px 85% 0);
-    --slice-4: inset(40% -6px 43% 0);
-    --slice-5: inset(80% -6px 5% 0);
-    
-    content: 'ALTERNATE TEXT';
-    display: block;
+/* Button Shadow Effect */
+.button-82-shadow {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
-    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
-    clip-path: var(--slice-0);
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
 }
 
-.button-49:hover:after {
-    animation: 1s glitch;
-    animation-timing-function: steps(2, end);
+/* Button Edge Styling */
+.button-82-edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+      to left,
+      #002765 0%,
+      #0045a1 8%,
+      #0045a1 92%,
+      #002765 100%
+    );
 }
 
-@keyframes glitch {
-    0% {
-        clip-path: var(--slice-1);
-        transform: translate(-20px, -10px);
-    }
-    10% {
-        clip-path: var(--slice-3);
-        transform: translate(10px, 10px);
-    }
-    20% {
-        clip-path: var(--slice-1);
-        transform: translate(-10px, 10px);
-    }
-    30% {
-        clip-path: var(--slice-3);
-        transform: translate(0px, 5px);
-    }
-    40% {
-        clip-path: var(--slice-2);
-        transform: translate(-5px, 0px);
-    }
-    50% {
-        clip-path: var(--slice-3);
-        transform: translate(5px, 0px);
-    }
-    60% {
-        clip-path: var(--slice-4);
-        transform: translate(5px, 10px);
-    }
-    70% {
-        clip-path: var(--slice-2);
-        transform: translate(-10px, 10px);
-    }
-    80% {
-        clip-path: var(--slice-5);
-        transform: translate(20px, -10px);
-    }
-    90% {
-        clip-path: var(--slice-1);
-        transform: translate(-10px, 0px);
-    }
-    100% {
-        clip-path: var(--slice-1);
-        transform: translate(0);
-    }
+/* General Button Front Styling */
+.button-82-front {
+    display: block;
+    position: relative;
+    padding: 12px 20px;  /* Adjusted Padding */
+    border-radius: 12px;
+    font-size: 1rem;  /* Adjust Font Size */
+    color: white;
+    background: linear-gradient(135deg, #153677, #4e0857);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
 }
 
+/* Specific Button Styles */
+.login-button .button-82-front {
+    background: #4CAF50; /* Green background for Login */
+}
 
+.signup-button .button-82-front {
+    background: #F44336; /* Red background for Sign Up */
+}
+
+/* Responsive Design */
 @media (min-width: 768px) {
-  .button-49,
-  .button-49:after {
-    width: 100px;
-    height: 70px;
-    line-height: 81px;
-  }
+    .button-82-front {
+        font-size: 1.2rem; /* Larger font size */
+        padding: 14px 30px;  /* Larger padding */
+    }
 }
 
+/* Hover and Active States */
+.button-82-pushable:hover {
+    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
+}
+
+.button-82-pushable:hover .button-82-front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+    outline: none;
+}
+
+
+/* Base button styles */
+.button-42 {
+    background-image: linear-gradient(-180deg, #002765, #153677); /* Dark blue gradient */
+    border-radius: 12px; /* Rounded corners to match the website's style */
+    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 8px; /* Slightly stronger shadow for depth */
+    color: #FFFFFF; /* White text color for contrast */
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif; /* Matching the site's font */
+    height: 45px;
+    line-height: 45px;
+    outline: 0;
+    overflow: hidden;
+    padding: 0 25px;
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: top;
+    white-space: nowrap;
+    width: auto; /* Adjust width to fit content */
+    z-index: 9;
+    border: 0;
+    transition: box-shadow .2s, transform 0.2s;
+  }
+  
+  /* Hover effect */
+  .button-42:hover {
+    box-shadow: rgba(0, 39, 101, 0.5) 0 4px 12px; /* Slightly more pronounced shadow on hover */
+    transform: translateY(-2px); /* Adds a slight lift on hover */
+  }
+  
+  /* Active effect */
+  .button-42:active {
+    transform: translateY(0); /* Button returns to normal position when clicked */
+    box-shadow: rgba(0, 39, 101, 0.3) 0 2px 4px; /* Slightly reduced shadow on click */
+  }
+  
+  /* Focus effect */
+  .button-42:focus {
+    outline: 2px solid #4e0857; /* Purple outline to match the website's secondary color */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .button-42 {
+      width: 100%; /* Full-width on smaller screens */
+      padding: 10px;
+    }
+  }
+  
 /* Footer Styles */
 footer {
     background-color: #002765;
@@ -372,3 +414,4 @@ footer {
     margin-top: 20px;
     font-size: 14px;
 }
+
