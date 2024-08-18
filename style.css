@@ -15,7 +15,7 @@ body {
 .container {
     width: 100%;
     min-height: 100vh;
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 /* Navbar Styles */
@@ -24,10 +24,10 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    padding: 10px 20px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0.625rem 1.25rem;
+    border-radius: 1.25rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .nav-left, .nav-right {
@@ -35,8 +35,12 @@ body {
     align-items: center;
 }
 
+.nav-left{
+    padding-right: 3.125rem;
+}
+
 .nav-brand {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #002765;
     text-decoration: none;
@@ -45,41 +49,55 @@ body {
 .nav-left a, .nav-right a {
     color: #002765;
     text-decoration: none;
-    margin-right: 20px;
-    font-size: 16px;
+    margin-right: 1.25rem;
+    font-size: 1rem;
 }
 
 .dropdown {
     position: relative;
     margin-right: 2rem;
+    display: flex;
 }
 
 .dropbtn {
     background-color: #002765;
     color: white;
-    padding: 10px;
+    padding: 0.625rem;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+    margin-right: 2.5rem;
+}
+@media (min-width: 768px) {
+    .nav-left{
+        padding-right: 0%;
+    }
+    .dropdown{
+        margin-right: 1rem;
+        display: inline-block;
+    }
+    .dropbtn{
+        margin-right: 0rem;
+    }
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    min-width: 10rem;
+    box-shadow: 0rem 0.5rem 1rem rgba(0,0,0,0.2);
     z-index: 1;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
 }
 
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 0.75rem 1rem;
     text-decoration: none;
     display: block;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .dropdown-content a:hover {
@@ -94,9 +112,9 @@ body {
 #search-container {
     display: flex;
     align-items: center;
-    border: 2px solid #002765;
-    border-radius: 25px;
-    padding: 5px;
+    border: 0.125rem solid #002765;
+    border-radius: 1.5625rem;
+    padding: 0.3125rem;
     background-color: #fff;
     margin-right: 2rem;
 }
@@ -104,10 +122,10 @@ body {
 #search-bar {
     border: none;
     outline: none;
-    padding: 5px 10px;
-    font-size: 16px;
+    padding: 0.3125rem 0.625rem;
+    font-size: 1rem;
     flex-grow: 1;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     background: transparent;
 }
 
@@ -115,9 +133,9 @@ body {
     background: transparent;
     border: none;
     color: #002765;
-    padding: 5px 10px;
+    padding: 0.3125rem 0.625rem;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 1.25rem;
     border-radius: 50%;
 }
 
@@ -128,10 +146,10 @@ body {
 
 /* Home Section Styles */
 #home {
-    padding: 20px;
+    padding: 1.25rem;
     background-color: white;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 0.625rem;
+    margin-bottom: 1.25rem;
 }
 
 .home-cards {
@@ -142,32 +160,32 @@ body {
 
 .card {
     background-color: #f0f0f0;
-    width: 300px;
-    margin: 15px;
-    padding: 15px;
-    border-radius: 10px;
+    width: 18.75rem;
+    margin: 0.9375rem;
+    padding: 0.9375rem;
+    border-radius: 0.625rem;
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 .card img {
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    border-radius: 0.625rem;
+    margin-bottom: 0.9375rem;
 }
 
 .card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 1.25rem;
+    margin-bottom: 0.625rem;
 }
 
 .card p {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 /* Main Content Styles */
 .content {
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 /* Modal Styles */
@@ -186,17 +204,17 @@ body {
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
+    padding: 1.25rem;
+    border: 0.0625rem solid #888;
     width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
+    max-width: 31.25rem;
+    border-radius: 0.625rem;
 }
 
 .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: bold;
 }
 
@@ -213,20 +231,20 @@ body {
 }
 
 .form-content input {
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
+    padding: 0.625rem;
+    margin-bottom: 0.9375rem;
+    border-radius: 0.3125rem;
+    border: 0.0625rem solid #ccc;
+    font-size: 1rem;
 }
 
 .form-content button {
-    padding: 10px;
+    padding: 0.625rem;
     background-color: #002765;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
     cursor: pointer;
 }
 
@@ -240,7 +258,7 @@ body {
 /* Container Styles */
 .nav-acc {
     display: flex;
-    gap: 10px; /* Space between buttons */
+    gap: 0.625rem; /* Space between buttons */
 }
 
 /* General Button Styles */
@@ -250,7 +268,7 @@ body {
     background: transparent;
     padding: 0;
     cursor: pointer;
-    outline-offset: 4px;
+    outline-offset: 0.25rem;
     transition: filter 250ms, transform 250ms;
     user-select: none;
     -webkit-user-select: none;
@@ -265,10 +283,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 12px;
+    border-radius: 0.75rem;
     background: hsl(0deg 0% 0% / 0.25);
     will-change: transform;
-    transform: translateY(2px);
+    transform: translateY(0.125rem);
     transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
 }
 
@@ -279,7 +297,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 12px;
+    border-radius: 0.75rem;
     background: linear-gradient(
       to left,
       #002765 0%,
@@ -293,13 +311,13 @@ body {
 .button-82-front {
     display: block;
     position: relative;
-    padding: 12px 20px;  /* Adjusted Padding */
-    border-radius: 12px;
+    padding: 0.75rem 1.25rem;  /* Adjusted Padding */
+    border-radius: 0.75rem;
     font-size: 1rem;  /* Adjust Font Size */
     color: white;
     background: linear-gradient(135deg, #153677, #4e0857);
     will-change: transform;
-    transform: translateY(-4px);
+    transform: translateY(-0.25rem);
     transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
 }
 
@@ -314,9 +332,12 @@ body {
 
 /* Responsive Design */
 @media (min-width: 768px) {
+
     .button-82-front {
-        font-size: 1.2rem; /* Larger font size */
-        padding: 14px 30px;  /* Larger padding */
+        font-size: 1rem; /* Larger font size */
+        padding: 0.625rem 1.6875rem;  /* Larger padding */
+        display: flex;
+        white-space: nowrap;
     }
 }
 
@@ -327,22 +348,22 @@ body {
 }
 
 .button-82-pushable:hover .button-82-front {
-    transform: translateY(-6px);
+    transform: translateY(-0.375rem);
     transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
 }
 
 .button-82-pushable:active .button-82-front {
-    transform: translateY(-2px);
+    transform: translateY(-0.125rem);
     transition: transform 34ms;
 }
 
 .button-82-pushable:hover .button-82-shadow {
-    transform: translateY(4px);
+    transform: translateY(0.25rem);
     transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
 }
 
 .button-82-pushable:active .button-82-shadow {
-    transform: translateY(1px);
+    transform: translateY(0.0625rem);
     transition: transform 34ms;
 }
 
@@ -354,17 +375,17 @@ body {
 /* Base button styles */
 .button-42 {
     background-image: linear-gradient(-180deg, #002765, #153677); /* Dark blue gradient */
-    border-radius: 12px; /* Rounded corners to match the website's style */
-    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 8px; /* Slightly stronger shadow for depth */
+    border-radius: 0.75rem; /* Rounded corners to match the website's style */
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0.25rem 0.5rem; /* Slightly stronger shadow for depth */
     color: #FFFFFF; /* White text color for contrast */
     cursor: pointer;
     display: inline-block;
     font-family: 'Times New Roman', Times, serif; /* Matching the site's font */
-    height: 45px;
-    line-height: 45px;
+    height: 2.8125rem;
+    line-height: 2.8125rem;
     outline: 0;
     overflow: hidden;
-    padding: 0 25px;
+    padding: 0 1.5625rem;
     pointer-events: auto;
     position: relative;
     text-align: center;
@@ -381,26 +402,26 @@ body {
   
   /* Hover effect */
   .button-42:hover {
-    box-shadow: rgba(0, 39, 101, 0.5) 0 4px 12px; /* Slightly more pronounced shadow on hover */
-    transform: translateY(-2px); /* Adds a slight lift on hover */
+    box-shadow: rgba(0, 39, 101, 0.5) 0 0.25rem 0.75rem; /* Slightly more pronounced shadow on hover */
+    transform: translateY(-0.125rem); /* Adds a slight lift on hover */
   }
   
   /* Active effect */
   .button-42:active {
     transform: translateY(0); /* Button returns to normal position when clicked */
-    box-shadow: rgba(0, 39, 101, 0.3) 0 2px 4px; /* Slightly reduced shadow on click */
+    box-shadow: rgba(0, 39, 101, 0.3) 0 0.125rem 0.25rem; /* Slightly reduced shadow on click */
   }
   
   /* Focus effect */
   .button-42:focus {
-    outline: 2px solid #4e0857; /* Purple outline to match the website's secondary color */
+    outline: 0.125rem solid #4e0857; /* Purple outline to match the website's secondary color */
   }
   
   /* Responsive Design */
   @media (max-width: 768px) {
     .button-42 {
       width: 100%; /* Full-width on smaller screens */
-      padding: 10px;
+      padding: 0.625rem;
     }
   }
   
@@ -409,9 +430,9 @@ footer {
     background-color: #002765;
     color: white;
     text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 20px;
-    font-size: 14px;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    margin-top: 1.25rem;
+    font-size: 0.875rem;
 }
 
