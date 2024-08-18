@@ -1,6 +1,6 @@
 /* Topic Videos Section */
 #topic-videos {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .video-cards {
@@ -10,12 +10,12 @@
 }
 
 .video-cards .card {
-    width: 300px;
+    width: 18.75rem;
 }
 
 /* eBooks Section */
 #ebooks {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .ebook-cards {
@@ -25,27 +25,27 @@
 }
 
 .ebook-cards .card {
-    width: 300px;
+    width: 18.75rem;
 }
 
 /* About Us Section */
 #about-us {
-    padding: 20px;
+    padding: 1.25rem;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
 
 .team-member, .teacher-helper {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .team-member img, .teacher-helper img {
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
     border-radius: 50%;
-    margin-right: 15px;
+    margin-right: 0.9375rem;
 }
 
 .team-member h3, .teacher-helper h3 {
