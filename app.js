@@ -69,3 +69,19 @@ button.addEventListener("click", function() {
         this.textContent = "ALTERNATE TEXT";
     }, 1000);
 });
+// Toggle search bar visibility
+document.getElementById('search-icon').addEventListener('click', function() {
+    var searchContainer = document.getElementById('search-container');
+    searchContainer.classList.toggle('open');
+});
+
+function searchContent() {
+    let query = document.getElementById('search-bar').value.trim();
+    if (query) {
+        // Redirect to a search results page or perform an AJAX search
+        window.location.href = `search_results.html?query=${encodeURIComponent(query)}`;
+    } else {
+        alert("Please enter a search term.");
+    }
+}
+
