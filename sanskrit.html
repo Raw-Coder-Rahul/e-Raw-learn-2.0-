@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanskrit</title>
+    <title>Python</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -68,6 +68,9 @@
                     </button>
                 </div>
             </div>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </nav>
 
         <!-- Main Content -->
@@ -106,10 +109,64 @@
                 </div>
             </section>
         </div>
+            <!-- Modal for Login and Signup -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <div id="login-form" class="form-content">
+                        <input type="text" placeholder="Username" required>
+                        <input type="password" placeholder="Password" required>
+                        <button onclick="login()">Login</button>
+                    </div>
+                    <div id="signup-form" class="form-content" style="display:none;">
+                        <input type="text" placeholder="Username" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Password" required>
+                        <button onclick="signup()">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+                    <!-- Main Dropdown Menu -->
+    <div class="dropdown_menu">
+        <li><a href="home.html">Home</a></li>
+        <li class="dropdown">
+            <a href="#">Topics <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-submenu topics-menu">
+                <li><a href="sanskrit.html">Sanskrit</a></li>
+                <li><a href="math.html">Math</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="biology.html">Biology</a></li>
+                <li><a href="html.html">HTML</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="javascript.html">JavaScript</a></li>
+                <li><a href="python.html">Python</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#">eBooks <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-submenu ebooks-menu">
+                <li><a href="sanskrit.html">Sanskrit</a></li>
+                <li><a href="math.html">Math</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="biology.html">Biology</a></li>
+                <li><a href="html.html">HTML</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="javascript.html">JavaScript</a></li>
+                <li><a href="python.html">Python</a></li>
+            </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#" class="action_btn">Get Started</a></li>
     </div>
-    <footer>
-        <p>Contact Us: 123-456-7890 | email@example.com</p>
-    </footer>
-    <script src="app.js"></script>
+    
+        </div>
+        <footer>
+            <p>Contact Us: 123-456-7890 | email@example.com</p>
+        </footer>
+        <!-- Include JS files with defer attribute -->
+        <script src="utils.js" defer></script>
+        <script src="modal.js" defer></script>
+        <script src="slider.js" defer></script>
+        <script src="navbar.js" defer></script>
 </body>
 </html>
