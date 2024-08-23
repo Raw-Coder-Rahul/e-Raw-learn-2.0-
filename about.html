@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="index.html" class="nav-brand">eLearning</a>
+                <div class="dropdown">
+                    <a href="home.html"><button class="dropbtn">Home</button></a>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Topics</button>
+                    <div class="dropdown-content">
+                        <a href="sanskrit.html">Sanskrit</a>
+                        <a href="math.html">Math</a>
+                        <a href="physics.html">Physics</a>
+                        <a href="biology.html">Biology</a>
+                        <a href="html.html">HTML</a>
+                        <a href="css.html">CSS</a>
+                        <a href="javascript.html">JavaScript</a>
+                        <a href="python.html">Python</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">eBooks</button>
+                    <div class="dropdown-content">
+                        <a href="sanskrit.html">Sanskrit</a>
+                        <a href="math.html">Math</a>
+                        <a href="physics.html">Physics</a>
+                        <a href="biology.html">Biology</a>
+                        <a href="html.html">HTML</a>
+                        <a href="css.html">CSS</a>
+                        <a href="javascript.html">JavaScript</a>
+                        <a href="python.html">Python</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="about.html"><button class="dropbtn">About</button></a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div id="search-container">
+                    <input type="text" id="search-bar" placeholder="Search..." />
+                    <button id="search-icon" onclick="searchContent()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="nav-acc">
+                    <button id="login-button" class="button-82-pushable" role="button" onclick="showModal('login')">
+                        <span class="button-82-shadow"></span>
+                        <span class="button-82-edge"></span>
+                        <span class="button-82-front text">Login</span>
+                    </button>
+            
+                    <button id="signup-button" class="button-82-pushable" role="button" onclick="showModal('signup')">
+                        <span class="button-82-shadow"></span>
+                        <span class="button-82-edge"></span>
+                        <span class="button-82-front text">Sign Up</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="content">
+            <!-- About Us Section -->
+            <section id="about-us">
+                <h2>About Us</h2>
+                <div class="team-member">
+                    <img src="member1.jpg" alt="Member 1">
+                    <h3>Rahul Sahoo</h3>
+                    <p>Rahul is the lead developer and the brain behind the platform. He has a passion for making education accessible to everyone.</p>
+                </div>
+                <div class="team-member">
+                    <img src="member2.jpg" alt="Member 2">
+                    <h3>Rishita Maity</h3>
+                    <p>Rishita is the content creator, ensuring all courses are high-quality and engaging.</p>
+                </div>
+                <div class="team-member">
+                    <img src="member3.jpg" alt="Member 3">
+                    <h3>Dipankar Sarkar</h3>
+                    <p>Dipankar handles the user experience, making sure the platform is easy to navigate and user-friendly.</p>
+                </div>
+                <div class="teacher-helper">
+                    <img src="teacher.jpg" alt="Teacher">
+                    <h3>Professor Sourav Malakar</h3>
+                    <p>Professor Sourav is our educational consultant, helping us design the curriculum and ensuring the quality of our content.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <p>Contact Us: 123-456-7890 | email@example.com</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
