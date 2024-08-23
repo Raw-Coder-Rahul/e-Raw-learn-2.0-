@@ -55,8 +55,7 @@ body {
 
 .dropdown {
     position: relative;
-    margin-right: 2rem;
-    display: flex;
+    display: inline-block;
 }
 
 .dropbtn {
@@ -67,7 +66,11 @@ body {
     cursor: pointer;
     border-radius: 0.3125rem;
     font-size: 1rem;
-    margin-right: 2.5rem;
+}
+
+.dropbtn:hover {
+    padding: 0.75rem;
+    background: linear-gradient(135deg, #153677, #4e0857);
 }
 
 .dropdown-content {
@@ -78,6 +81,8 @@ body {
     box-shadow: 0rem 0.5rem 1rem rgba(0,0,0,0.2);
     z-index: 1;
     border-radius: 0.3125rem;
+    top: 100%; /* Aligns directly below the dropdown button */
+    left: 0; /* Aligns with the left edge of the dropdown button */
 }
 
 .dropdown-content a {
@@ -94,6 +99,28 @@ body {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.dropbtn {
+    background-color: #002765;
+    color: white;
+    padding: 0.625rem 1rem;
+    border: none;
+    margin-right: 1.5rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px; /* Adjust width as needed */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 0.3125rem;
+    top: 100%; /* Aligns with the bottom of the button */
+    left: 0;
 }
 
 /* Search Bar Styling */
@@ -146,14 +173,17 @@ body {
     justify-content: space-around;
 }
 
+/* Card Styles */
 .card {
     background-color: #f0f0f0;
-    width: 18.75rem;
+    width: 100%; /* Adjust width to be responsive */
+    max-width: 18.75rem; /* Maximum width of the card */
     margin: 0.9375rem;
     padding: 0.9375rem;
     border-radius: 0.625rem;
     text-align: center;
     box-shadow: 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
 }
 
 .card img {
@@ -171,10 +201,43 @@ body {
     font-size: 1rem;
 }
 
+/* Video Styles */
+.video-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Adjust spacing between cards as needed */
+}
+
+.card iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Adjust aspect ratio if needed */
+}
+
 /* Main Content Styles */
 .content {
     padding: 1.25rem;
 }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 1.875rem); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 1.875rem); /* Full width on very small screens */
+    }
+}
+/* Make sure images in cards are clickable */
+.card a {
+    display: block;
+    text-decoration: none;
+    color: inherit; /* Ensure link color matches card text */
+}
+
 
 /* Modal Styles */
 .modal {
@@ -393,13 +456,35 @@ body {
   .button-42:focus {
     outline: 0.125rem solid #4e0857; /* Purple outline to match the website's secondary color */
   }
+  
+/* Footer Styles */
+footer {
+    background-color: #002765;
+    color: white;
+    text-align: center;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    margin-top: 1.25rem;
+    font-size: 0.875rem;
+}
+
+
+
 /*toogle btn*/
-.navbar .toggle_btn{
+/* Toggle Button */
+.navbar .toggle_btn {
     color: black;
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
 }
+
+.navbar .toggle_btn i {
+    transition: transform 0.2s ease;
+}
+
+
+
 .action_btn{
     background-color: orange;
     color: #fff;
@@ -422,70 +507,126 @@ body {
     scale: 0.95;
 }
 
-/*DROPDOWN MENU*/
-.dropdown_menu{
+/* General Styles */
+li {
+    list-style: none;
+}
+li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+li a:hover {
+    color: orange;
+}
+
+/* Main Dropdown Menu */
+.dropdown_menu {
     display: none;
     position: absolute;
     right: 2rem;
-    top: 60px;
-    height: 0;
-    width:300px;
-    background: rgba(255, 255, 255, 0.1);
+    top: 70px;
+    width: 250px;
+    background: #002765;
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: max-height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: 1000;
+    max-height: 0; /* Initial height to prevent overflow */
 }
-.dropdown_menu.open{
-    height: 240px;
+
+.dropdown_menu.open {
+    max-height: 500px; /* Adjust based on content */
     display: block;
 }
 
-.dropdown_menu li{
+/* Dropdown Items */
+.dropdown_menu li {
     padding: 0.7rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.dropdown_menu .action_btn{
+/* Nested Dropdown Submenu */
+.dropdown-submenu {
+    display: none;
+    position: absolute;
+    left: 40%; /* Opens to the right of the parent */
+    top: 0;
+    background: #002765;
+    border-radius: 10px;
+    min-width: 150px; /* Width for submenu */
+    max-height: 130px; /* Max height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    z-index: 1001;
+}
+
+.dropdown-submenu li {
+    padding: 0.7rem;
+}
+
+.dropdown-submenu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-submenu li a:hover {
+    color: orange;
+}
+
+/* Show submenu on hover */
+.dropdown:hover .dropdown-submenu {
+    display: block;
+}
+
+/* Action Button */
+.dropdown_menu .action_btn {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-
-
-/*RESPONSIVE DESIGN*/
-@media(max-width :1263px){
+/* Responsive Design */
+@media(max-width: 1263px) {
     .navbar .dropdown,
-    .nav-right .nav-acc{
+    .nav-right .nav-acc {
         display: none;
     }
 
-    .navbar .toggle_btn{
+    .navbar .toggle_btn {
         display: block;
     }
 
-    .dropdown_menu{
+    .dropdown_menu {
         display: block;
     }
 }
-@media(max-width :576px){
-    .dropdown_menu{
+
+@media(max-width: 576px) {
+    .dropdown_menu {
         left: 2rem;
+        width: unset;
+    }
+    #search-container {
         width: unset;
     }
 }
 
-/* Footer Styles */
-footer {
-    background-color: #002765;
-    color: white;
-    text-align: center;
-    padding: 0.625rem;
-    border-radius: 0.625rem;
-    margin-top: 1.25rem;
-    font-size: 0.875rem;
+@media(min-width: 784px) and (max-width: 811px) {
+    #search-container {
+        margin-left: -50px;
+        width: 570px;
+    }
+}
+
+@media(max-width: 532px) {
+    #search-container {
+        margin-left: -3.5rem;
+        width: 200px;
+    }
+    #search-icon {
+        margin-left: -3rem;
+    }
 }
