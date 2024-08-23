@@ -393,20 +393,6 @@ body {
   .button-42:focus {
     outline: 0.125rem solid #4e0857; /* Purple outline to match the website's secondary color */
   }
-  
-/* Footer Styles */
-footer {
-    background-color: #002765;
-    color: white;
-    text-align: center;
-    padding: 0.625rem;
-    border-radius: 0.625rem;
-    margin-top: 1.25rem;
-    font-size: 0.875rem;
-}
-
-
-
 /*toogle btn*/
 .navbar .toggle_btn{
     color: black;
@@ -491,4 +477,15 @@ footer {
         left: 2rem;
         width: unset;
     }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #002765;
+    color: white;
+    text-align: center;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    margin-top: 1.25rem;
+    font-size: 0.875rem;
 }
