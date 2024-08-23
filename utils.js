@@ -6,24 +6,34 @@ document.addEventListener("DOMContentLoaded", function () {
     togglebtn.addEventListener('click', function () {
         dropDownMenu.classList.toggle('open');
         const isOpen = dropDownMenu.classList.contains('open');
-        togglebtnIcon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
-    });
-    
-    const button = document.querySelector(".button-49");
-
-    button.addEventListener("click", function () {
-        this.textContent = "Clicked!";
-        setTimeout(() => {
-            this.textContent = "ALTERNATE TEXT";
-        }, 1000);
+        togglebtnIcon.className = isOpen ? 'fas fa-xmark' : 'fas fa-bars';
     });
 
+    // Handle dropdown and submenu display
+    document.querySelectorAll('.dropdown').forEach(function (dropdown) {
+        dropdown.addEventListener('mouseover', function () {
+            const submenu = this.querySelector('.dropdown-submenu');
+            if (submenu) {
+                submenu.style.display = 'block';
+            }
+        });
+        dropdown.addEventListener('mouseout', function () {
+            const submenu = this.querySelector('.dropdown-submenu');
+            if (submenu) {
+                submenu.style.display = 'none';
+            }
+        });
+    });
+
+    // Handle search functionality
     const searchIcon = document.getElementById('search-icon');
     const searchContainer = document.getElementById('search-container');
 
-    searchIcon.addEventListener('click', function () {
-        searchContainer.classList.toggle('open');
-    });
+    if (searchIcon) {
+        searchIcon.addEventListener('click', function () {
+            searchContainer.classList.toggle('open');
+        });
+    }
 
     function searchContent() {
         let query = document.getElementById('search-bar').value.trim();
@@ -32,5 +42,11 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             alert("Please enter a search term.");
         }
+    }
+
+    const searchButton = document.getElementById('search-button');
+
+    if (searchButton) {
+        searchButton.addEventListener('click', searchContent);
     }
 });
